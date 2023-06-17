@@ -1,0 +1,16 @@
+<div>
+  <p><b>From:</b> <a href="/profile/{{data.sender._id}}">{{data.sender.name}}</a></p>
+  <p><b>To:</b> <a href="/profile/{{data.recipient._id}}">{{data.recipient.name}}</a></p>
+  <p style="margin-top: 15px">Message:</p>
+  <div style="border: 0.5px solid #D0B23F; padding:10px">
+    {{data.content}}
+  </div>
+  <p style="color:gray">{{data.time}}</p>
+
+
+  {{#if notProf}}
+  <p>
+    <a href="/messages/send/{{data.sender._id}}">Reply to {{data.sender.name}}</a>
+  </p>
+  {{/if}}
+</div>
